@@ -1,0 +1,533 @@
+* , ::after, ::before{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* HEADER */
+
+header { 
+  height: 15vh;
+  position: fixed;
+  top:0px;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+}
+
+header h1 {
+  width:30%;
+  padding: 0 30px;
+  margin: auto;
+}
+
+.navbar {
+  width: 60%;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height:100%;
+  list-style: none;
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+
+/* MAIN */
+
+main {
+  margin-top: 15vh;
+}
+
+
+.pst-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 80px;
+} 
+
+.pst-area.projects{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+/* INPUT FORM */
+
+.input-section {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.input-section h2{
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.register-form{
+  width:60%;
+  display:flex;
+  flex-direction: column;
+  font-size: 1.2rem;    
+}
+
+.register-field{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.7rem 0;
+}
+
+.register-field .register-input{
+  height: 1.7rem;
+  font-size: 0.8rem;
+  padding: 0 2%;
+  background-color: var(--text-area-color);
+  outline: none;
+  border: solid grey 0.5px;   
+  border-radius: 20px;
+}
+
+.register-field label{
+  margin-bottom: 0.2rem;
+  padding-left: 5px;
+}
+
+.register-field:has(.gender-section) label:first-of-type{
+  padding-left: 0;
+  margin: 0 auto 0.6rem;
+}
+
+.register-field .gender-section{
+  padding: 0 18% 0 15%;
+  display:flex;
+  justify-content: space-between;
+}
+
+.register-field .gender-section > label{
+  margin-right: 2rem;
+}
+
+.register-btn {
+  width:80%;
+  height:2rem;
+  margin:1rem  auto;  
+  font-size: 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* TTABLE */
+
+.table-container {
+  width: 55%;
+  max-height: 460px;
+  overflow-y: auto;
+  padding-top: 20px;
+}
+
+.table-container.projects {
+  width: 55%;
+  max-height: 460px;
+  overflow-y: auto;
+  padding-top: 60px;
+}
+
+.techniciansTable {
+  border-collapse: collapse;
+  margin-right: 50px;
+}
+
+.techniciansTable td {
+  height: 30px;
+}
+
+.techniciansTable th,
+.techniciansTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.techniciansTable th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.techniciansTable th.name,
+.techniciansTable td.name {
+  width: fit-content;
+  max-width: 35%;
+}
+
+.techniciansTable th.email,
+.techniciansTable td.email {
+  width: fit-content;
+  max-width: 35%;
+}
+
+.techniciansTable th.gender,
+.techniciansTable td.gender {
+  width: 10%;
+}
+
+.techniciansTable th.age,
+.techniciansTable td.age {
+  width: 10%;
+}
+
+.techniciansTable th.actions,
+.techniciansTable td.actions {
+  max-width:10%;
+}
+
+.techniciansTable td.actions div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.techniciansTable th.actions {
+  text-align: center;
+}
+
+.techniciansTable td.actions button{
+  border-radius: 10px;
+  width: 40%;
+}
+
+.techniciansTable td.actions button:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.techniciansTable td.actions .edit{
+  background-color: rgb(252, 236, 189);
+}
+
+.techniciansTable td.actions .delete{
+  background-color: rgb(222, 80, 80);
+  min-width: fit-content;
+}
+
+/* TTABLE INPUTS */
+
+.techniciansTable .gender-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.techniciansTable .gender-section span{
+  display: flex;
+  flex-direction: column;
+}
+
+.techniciansTable .gender-section label{
+  text-align: center;
+}
+
+.techniciansTable .register-input {
+  border-radius: 10px;
+  height: 1.6rem;
+  width: 100%;
+  padding: 0 2%;
+  background-color: var(--text-area-color);
+  outline: none;
+  border: solid grey 0.5px;   
+}
+
+.techniciansTable .register-input[name="editAge"]{
+  text-align: center;  
+}
+
+
+/* STABLE */
+
+
+.specializationsTable {
+  border-collapse: collapse;
+  margin-right: 50px;
+}
+
+.specializationsTable td {
+  height: 30px;
+}
+
+.specializationsTable th,
+.specializationsTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.specializationsTable th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.specializationsTable th.name,
+.specializationsTable td.name {
+  width: 40%;
+  min-width: fit-content;
+}
+
+.specializationsTable th.field,
+.specializationsTable td.field {
+  width: 40%;
+  min-width: fit-content;
+}
+
+.specializationsTable th.actions,
+.specializationsTable td.actions {
+  width: 15%; 
+  min-width: fit-content;
+}
+
+.specializationsTable td.actions div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.specializationsTable th.actions {
+  text-align: center;
+}
+
+.specializationsTable td.actions button{
+  border-radius: 10px;
+  width: 40%;
+}
+
+.specializationsTable td.actions button:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.specializationsTable td.actions .edit{
+  background-color: rgb(252, 236, 189);
+}
+
+.specializationsTable td.actions .delete{
+  background-color: rgb(222, 80, 80);
+  min-width: fit-content;
+}
+
+/* STABLE INPUTS */
+
+.specializationsTable .register-input {
+  border-radius: 10px;
+  height: 1.6rem;
+  width: 100%;
+  padding: 0 2%;
+  background-color: var(--text-area-color);
+  outline: none;
+  border: solid grey 0.5px;   
+}
+
+
+/* PTABLE */
+
+
+.projectsTable {
+  border-collapse: collapse;
+  margin-right: 50px;
+}
+
+.projectsTable td {
+  height: 30px;
+}
+
+.projectsTable th,
+.projectsTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.projectsTable th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.projectsTable th.name,
+.projectsTable td.name {
+  width: 18%;
+  min-width: fit-content;
+}
+
+.projectsTable th.technician,
+.projectsTable td.technician {
+  width: 18%;
+  min-width: fit-content;
+}
+
+.projectsTable th.specialization,
+.projectsTable td.specialization {
+  width: 18%;
+  min-width: fit-content;
+}
+
+.projectsTable th.duration,
+.projectsTable td.duration {
+  width: 10%;
+  text-align: center;
+}
+
+.projectsTable th.city,
+.projectsTable td.city {
+  width: 18%;
+  min-width: fit-content;
+}
+
+.projectsTable th.actions,
+.projectsTable td.actions {
+  max-width:18%;
+}
+
+.projectsTable td.actions div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.projectsTable th.actions {
+  text-align: center;
+}
+
+.projectsTable td.actions button{
+  border-radius: 10px;
+  width: 40%;
+}
+
+.projectsTable td.actions button:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.projectsTable td.actions .edit{
+  background-color: rgb(252, 236, 189);
+}
+
+.projectsTable td.actions .delete{
+  background-color: rgb(222, 80, 80);
+  min-width: fit-content;
+}
+
+/* PTABLE INPUTS */
+
+.projectsTable .register-input {
+  border-radius: 10px;
+  height: 1.6rem;
+  width: 100%;
+  padding: 0 2%;
+  background-color: var(--text-area-color);
+  outline: none;
+  border: solid grey 0.5px;   
+}
+
+.projectsTable .register-input[name="editDuration"]{
+  text-align: center;  
+}
+
+
+
+/* HOME PAGE  */
+
+.home-container > :not(:last-child){
+  width: 600px;
+  margin-bottom: 70px;
+}
+
+.home-container {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-container h2{
+  font-size: 1.1em;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header h1 {
+  margin-bottom: 15px;
+}
+
+.features h2{
+  padding-left: 20px;
+}
+
+.get-started h2, p {
+  text-align: center;
+}
+
+.get-started a {
+  margin: 0 5px;
+}
+
+.get-started .buttons{
+  text-align: center;
+}
+
+.get-started button {
+  cursor: pointer;
+  height: 2em;
+  margin-top: 5px;
+  background-color: rgb(252, 236, 189);
+  border-width: 0.5px;
+}
+
+.about {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.about h4 {
+  text-align: center;
+  font-size: 0.95em;
+  font-weight: 500;
+}
+
+.about p {
+  text-align: center;
+  font-size: 0.85em;
+}
