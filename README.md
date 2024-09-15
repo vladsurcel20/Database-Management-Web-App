@@ -1,7 +1,8 @@
 # Project Management System
 
 ## Overview
-This project aims to provide a comprehensive solution for managing technicians and their associated projects. It offers a user-friendly interface for efficient project management, facilitating tasks such as adding, updating, and deleting technician and project information.
+   I developed a web application focused on managing technicians, their specializations, and project assignments. Users can easily add, update, view, and remove technicians, categorize them by specialization, and assign them to specific projects. The app tracks each technician’s skills, making it simple to match them with relevant projects.
+   Additionally, users can monitor the progress of ongoing projects and manage deadlines, ensuring the right technician is assigned to the right task. With built-in error handling, the app provides clear feedback on actions, preventing mistakes like duplicate entries or incomplete data. This makes the management of technicians and projects streamlined and efficient.
 
 ## Technologies Used
 - **Frontend**: React.js
